@@ -1,0 +1,436 @@
+2020-11-05 11:06:39 INFO  main com.cls.CLSApplication Starting CLSApplication on hp-PC with PID 7408 (started by Administrator in E:\华夏明科项目\中国法学会课题管理系统\代码\china-law-society)
+2020-11-05 11:06:39 INFO  main com.cls.CLSApplication The following profiles are active: dev
+2020-11-05 11:06:42 INFO  main org.springframework.data.repository.config.RepositoryConfigurationDelegate Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-05 11:06:42 INFO  main org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-05 11:06:42 INFO  main org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 49ms. Found 0 Redis repository interfaces.
+2020-11-05 11:06:43 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:44 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$96b0fda1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:44 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:44 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dynamicDatasourceAnnotationAdvisor' of type [com.baomidou.dynamic.datasource.aop.DynamicDataSourceAnnotationAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:44 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'myProperties' of type [com.cls.common.properties.MyProperties$$EnhancerBySpringCGLIB$$d746effd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:44 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'shiroConfig' of type [com.cls.common.authentication.ShiroConfig$$EnhancerBySpringCGLIB$$5f611884] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:44 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:44 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'mybatisPlusConfigure' of type [com.cls.common.configure.MybatisPlusConfigure$$EnhancerBySpringCGLIB$$6584bf88] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:44 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dataPermissionInterceptor' of type [com.cls.common.interceptor.DataPermissionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:44 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'desensitizationInterceptor' of type [com.cls.common.interceptor.DesensitizationInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:44 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'pageHelper' of type [com.github.pagehelper.PageHelper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:44 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$6aeaf96a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:44 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dataSourceCreator' of type [com.baomidou.dynamic.datasource.creator.DataSourceCreator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:44 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dynamicDataSourceProvider' of type [com.baomidou.dynamic.datasource.provider.YmlDynamicDataSourceProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:44 INFO  main com.baomidou.dynamic.datasource.DynamicRoutingDataSource dynamic-datasource detect P6SPY plugin and enabled it
+2020-11-05 11:06:44 INFO  main com.zaxxer.hikari.HikariDataSource base - Starting...
+2020-11-05 11:06:44 INFO  main com.zaxxer.hikari.HikariDataSource base - Start completed.
+2020-11-05 11:06:44 INFO  main com.baomidou.dynamic.datasource.DynamicRoutingDataSource dynamic-datasource [base] wrap p6spy plugin
+2020-11-05 11:06:44 INFO  main com.baomidou.dynamic.datasource.DynamicRoutingDataSource dynamic-datasource - load a datasource named [base] success
+2020-11-05 11:06:44 INFO  main com.baomidou.dynamic.datasource.DynamicRoutingDataSource dynamic-datasource initial loaded [1] datasource,primary datasource named [base]
+2020-11-05 11:06:44 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dataSource' of type [com.baomidou.dynamic.datasource.DynamicRoutingDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:44 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:44 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:45 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'mybatisMetaObjectHandler' of type [com.cls.common.handler.MybatisMetaObjectHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:45 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:45 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:45 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userDataPermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:45 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userDataPermissionMapper' of type [com.sun.proxy.$Proxy118] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:45 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userDataPermissionService' of type [com.cls.system.service.impl.UserDataPermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:46 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'roleMenuMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:46 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'roleMenuMapper' of type [com.sun.proxy.$Proxy120] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:46 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'roleMenuServiceImpl' of type [com.cls.system.service.impl.RoleMenuServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:46 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'menuMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:46 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'menuMapper' of type [com.sun.proxy.$Proxy122] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:46 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'menuServiceImpl' of type [com.cls.system.service.impl.MenuServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:46 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:46 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userRoleMapper' of type [com.sun.proxy.$Proxy124] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:46 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userRoleServiceImpl' of type [com.cls.system.service.impl.UserRoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:46 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:46 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userMapper' of type [com.sun.proxy.$Proxy126] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:46 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userServiceImpl' of type [com.cls.system.service.impl.UserServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:46 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'roleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:46 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'roleMapper' of type [com.sun.proxy.$Proxy129] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:46 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'roleServiceImpl' of type [com.cls.system.service.impl.RoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:46 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'shiroRealm' of type [com.cls.common.authentication.ShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:47 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'redisSessionDAO' of type [org.crazycake.shiro.RedisSessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:47 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'sessionManager' of type [org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:47 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:47 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:47 INFO  main org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8080 (http)
+2020-11-05 11:06:47 INFO  main org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-05 11:06:47 INFO  main org.apache.catalina.core.StandardService Starting service [Tomcat]
+2020-11-05 11:06:47 INFO  main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-11-05 11:06:48 INFO  main org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2020-11-05 11:06:48 INFO  main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 8417 ms
+2020-11-05 11:06:49 INFO  main com.cls.common.xss.XssFilter ------------ xss filter init ------------
+2020-11-05 11:06:52 INFO  main org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-11-05 11:06:52 INFO  main springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-11-05 11:06:52 INFO  main org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService
+2020-11-05 11:06:52 INFO  main org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService 'clsAsyncThreadPool'
+2020-11-05 11:06:53 INFO  main org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping Adding welcome page template: index
+2020-11-05 11:06:54 INFO  main org.quartz.impl.StdSchedulerFactory Using default implementation for ThreadExecutor
+2020-11-05 11:06:54 INFO  main org.quartz.core.SchedulerSignalerImpl Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-11-05 11:06:54 INFO  main org.quartz.core.QuartzScheduler Quartz Scheduler v.2.3.2 created.
+2020-11-05 11:06:54 INFO  main org.quartz.simpl.RAMJobStore RAMJobStore initialized.
+2020-11-05 11:06:54 INFO  main org.quartz.core.QuartzScheduler Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-11-05 11:06:54 INFO  main org.quartz.impl.StdSchedulerFactory Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2020-11-05 11:06:54 INFO  main org.quartz.impl.StdSchedulerFactory Quartz scheduler version: 2.3.2
+2020-11-05 11:06:54 INFO  main org.quartz.core.QuartzScheduler JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@bb4041
+2020-11-05 11:06:54 INFO  main springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Context refreshed
+2020-11-05 11:06:54 INFO  main springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+2020-11-05 11:06:55 INFO  main springfox.documentation.spring.web.scanners.ApiListingReferenceScanner Scanning for api listing references
+2020-11-05 11:06:55 INFO  main org.springframework.scheduling.quartz.SchedulerFactoryBean Starting Quartz Scheduler now
+2020-11-05 11:06:55 INFO  main org.quartz.core.QuartzScheduler Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2020-11-05 11:06:55 INFO  main org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"]
+2020-11-05 11:06:55 INFO  main org.apache.coyote.http11.Http11NioProtocol Pausing ProtocolHandler ["http-nio-8080"]
+2020-11-05 11:06:55 INFO  main org.apache.catalina.core.StandardService Stopping service [Tomcat]
+2020-11-05 11:06:55 INFO  main org.apache.coyote.http11.Http11NioProtocol Stopping ProtocolHandler ["http-nio-8080"]
+2020-11-05 11:06:55 INFO  main org.apache.coyote.http11.Http11NioProtocol Destroying ProtocolHandler ["http-nio-8080"]
+2020-11-05 11:06:55 INFO  main org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-05 11:06:55 INFO  main org.quartz.core.QuartzScheduler Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2020-11-05 11:06:55 INFO  main org.springframework.scheduling.quartz.SchedulerFactoryBean Shutting down Quartz Scheduler
+2020-11-05 11:06:55 INFO  main org.quartz.core.QuartzScheduler Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2020-11-05 11:06:55 INFO  main org.quartz.core.QuartzScheduler Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2020-11-05 11:06:55 INFO  main org.quartz.core.QuartzScheduler Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2020-11-05 11:06:55 INFO  main org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Shutting down ExecutorService 'clsAsyncThreadPool'
+2020-11-05 11:06:55 INFO  main com.baomidou.dynamic.datasource.DynamicRoutingDataSource dynamic-datasource start closing ....
+2020-11-05 11:06:55 INFO  main com.zaxxer.hikari.HikariDataSource base - Shutdown initiated...
+2020-11-05 11:06:55 INFO  main com.zaxxer.hikari.HikariDataSource base - Shutdown completed.
+2020-11-05 11:06:55 INFO  main com.baomidou.dynamic.datasource.DynamicRoutingDataSource dynamic-datasource all closed success,bye
+2020-11-05 11:14:55 INFO  main com.cls.CLSApplication Starting CLSApplication on hp-PC with PID 11540 (started by Administrator in E:\华夏明科项目\中国法学会课题管理系统\代码\china-law-society)
+2020-11-05 11:14:55 INFO  main com.cls.CLSApplication The following profiles are active: dev
+2020-11-05 11:14:56 INFO  main org.springframework.data.repository.config.RepositoryConfigurationDelegate Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-05 11:14:56 INFO  main org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-05 11:14:56 INFO  main org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 47ms. Found 0 Redis repository interfaces.
+2020-11-05 11:14:57 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:57 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$ef5c0177] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:57 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:57 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dynamicDatasourceAnnotationAdvisor' of type [com.baomidou.dynamic.datasource.aop.DynamicDataSourceAnnotationAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:57 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'myProperties' of type [com.cls.common.properties.MyProperties$$EnhancerBySpringCGLIB$$2ff1f3d3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:57 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'shiroConfig' of type [com.cls.common.authentication.ShiroConfig$$EnhancerBySpringCGLIB$$b80c1c5a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:57 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:57 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'mybatisPlusConfigure' of type [com.cls.common.configure.MybatisPlusConfigure$$EnhancerBySpringCGLIB$$be2fc35e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:57 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dataPermissionInterceptor' of type [com.cls.common.interceptor.DataPermissionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:57 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'desensitizationInterceptor' of type [com.cls.common.interceptor.DesensitizationInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:57 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'pageHelper' of type [com.github.pagehelper.PageHelper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:57 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$c395fd40] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:57 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dataSourceCreator' of type [com.baomidou.dynamic.datasource.creator.DataSourceCreator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:57 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dynamicDataSourceProvider' of type [com.baomidou.dynamic.datasource.provider.YmlDynamicDataSourceProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:57 INFO  main com.baomidou.dynamic.datasource.DynamicRoutingDataSource dynamic-datasource detect P6SPY plugin and enabled it
+2020-11-05 11:14:57 INFO  main com.zaxxer.hikari.HikariDataSource base - Starting...
+2020-11-05 11:14:57 INFO  main com.zaxxer.hikari.HikariDataSource base - Start completed.
+2020-11-05 11:14:57 INFO  main com.baomidou.dynamic.datasource.DynamicRoutingDataSource dynamic-datasource [base] wrap p6spy plugin
+2020-11-05 11:14:57 INFO  main com.baomidou.dynamic.datasource.DynamicRoutingDataSource dynamic-datasource - load a datasource named [base] success
+2020-11-05 11:14:57 INFO  main com.baomidou.dynamic.datasource.DynamicRoutingDataSource dynamic-datasource initial loaded [1] datasource,primary datasource named [base]
+2020-11-05 11:14:57 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dataSource' of type [com.baomidou.dynamic.datasource.DynamicRoutingDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:57 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:57 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:58 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'mybatisMetaObjectHandler' of type [com.cls.common.handler.MybatisMetaObjectHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:58 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:58 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:58 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userDataPermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:58 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userDataPermissionMapper' of type [com.sun.proxy.$Proxy118] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:58 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userDataPermissionService' of type [com.cls.system.service.impl.UserDataPermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:58 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'roleMenuMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:58 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'roleMenuMapper' of type [com.sun.proxy.$Proxy120] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:58 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'roleMenuServiceImpl' of type [com.cls.system.service.impl.RoleMenuServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:58 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'menuMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:58 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'menuMapper' of type [com.sun.proxy.$Proxy122] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:58 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'menuServiceImpl' of type [com.cls.system.service.impl.MenuServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:58 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:58 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userRoleMapper' of type [com.sun.proxy.$Proxy124] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:58 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userRoleServiceImpl' of type [com.cls.system.service.impl.UserRoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:59 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:59 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userMapper' of type [com.sun.proxy.$Proxy126] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:59 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userServiceImpl' of type [com.cls.system.service.impl.UserServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:59 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'roleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:59 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'roleMapper' of type [com.sun.proxy.$Proxy129] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:59 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'roleServiceImpl' of type [com.cls.system.service.impl.RoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:59 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'shiroRealm' of type [com.cls.common.authentication.ShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:59 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'redisSessionDAO' of type [org.crazycake.shiro.RedisSessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:59 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'sessionManager' of type [org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:59 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:59 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:14:59 INFO  main org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8080 (http)
+2020-11-05 11:14:59 INFO  main org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-05 11:14:59 INFO  main org.apache.catalina.core.StandardService Starting service [Tomcat]
+2020-11-05 11:14:59 INFO  main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-11-05 11:15:00 INFO  main org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2020-11-05 11:15:00 INFO  main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 4705 ms
+2020-11-05 11:15:00 INFO  main com.cls.common.xss.XssFilter ------------ xss filter init ------------
+2020-11-05 11:15:02 INFO  main org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-11-05 11:15:02 INFO  main springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-11-05 11:15:02 INFO  main org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService
+2020-11-05 11:15:02 INFO  main org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService 'clsAsyncThreadPool'
+2020-11-05 11:15:02 INFO  main org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping Adding welcome page template: index
+2020-11-05 11:15:03 INFO  main org.quartz.impl.StdSchedulerFactory Using default implementation for ThreadExecutor
+2020-11-05 11:15:03 INFO  main org.quartz.core.SchedulerSignalerImpl Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-11-05 11:15:03 INFO  main org.quartz.core.QuartzScheduler Quartz Scheduler v.2.3.2 created.
+2020-11-05 11:15:03 INFO  main org.quartz.simpl.RAMJobStore RAMJobStore initialized.
+2020-11-05 11:15:03 INFO  main org.quartz.core.QuartzScheduler Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-11-05 11:15:03 INFO  main org.quartz.impl.StdSchedulerFactory Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2020-11-05 11:15:03 INFO  main org.quartz.impl.StdSchedulerFactory Quartz scheduler version: 2.3.2
+2020-11-05 11:15:03 INFO  main org.quartz.core.QuartzScheduler JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@185edc7
+2020-11-05 11:15:03 INFO  main springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Context refreshed
+2020-11-05 11:15:03 INFO  main springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+2020-11-05 11:15:03 INFO  main springfox.documentation.spring.web.scanners.ApiListingReferenceScanner Scanning for api listing references
+2020-11-05 11:15:03 INFO  main org.springframework.scheduling.quartz.SchedulerFactoryBean Starting Quartz Scheduler now
+2020-11-05 11:15:03 INFO  main org.quartz.core.QuartzScheduler Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2020-11-05 11:15:03 INFO  main org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"]
+2020-11-05 11:15:03 INFO  main org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-05 11:15:03 INFO  main com.cls.CLSApplication Started CLSApplication in 8.866 seconds (JVM running for 10.152)
+2020-11-05 11:15:03 INFO  main io.lettuce.core.EpollProvider Starting without optional epoll library
+2020-11-05 11:15:03 INFO  main io.lettuce.core.KqueueProvider Starting without optional kqueue library
+2020-11-05 11:15:04 INFO  main com.cls.common.runner.MyStartedUpRunner  __    ___   _      ___   _     ____ _____  ____ 
+2020-11-05 11:15:04 INFO  main com.cls.common.runner.MyStartedUpRunner / /`  / / \ | |\/| | |_) | |   | |_   | |  | |_  
+2020-11-05 11:15:04 INFO  main com.cls.common.runner.MyStartedUpRunner \_\_, \_\_/ |_|  | |_|   |_|__ |_|__  |_|  |_|__ 
+2020-11-05 11:15:04 INFO  main com.cls.common.runner.MyStartedUpRunner                                                       
+2020-11-05 11:15:04 INFO  main com.cls.common.runner.MyStartedUpRunner 权限系统启动完毕，地址：http://192.168.214.2:8080/login
+2020-11-05 11:15:06 INFO  http-nio-8080-exec-1 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-05 11:15:06 INFO  http-nio-8080-exec-1 org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2020-11-05 11:15:06 INFO  http-nio-8080-exec-1 org.springframework.web.servlet.DispatcherServlet Completed initialization in 45 ms
+2020-11-05 11:15:06 INFO  http-nio-8080-exec-1 org.apache.shiro.session.mgt.AbstractValidatingSessionManager Enabling session validation scheduler...
+2020-11-05 11:15:08 INFO  http-nio-8080-exec-3 com.cls.common.aspect.LimitAspect IP:192.168.214.2 第 1 次访问key为 [limit_get_captcha192.168.214.2]，描述为 [获取验证码] 的接口
+2020-11-05 11:16:26 INFO  SpringContextShutdownHook org.quartz.core.QuartzScheduler Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2020-11-05 11:16:26 INFO  SpringContextShutdownHook org.springframework.scheduling.quartz.SchedulerFactoryBean Shutting down Quartz Scheduler
+2020-11-05 11:16:26 INFO  SpringContextShutdownHook org.quartz.core.QuartzScheduler Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2020-11-05 11:16:26 INFO  SpringContextShutdownHook org.quartz.core.QuartzScheduler Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2020-11-05 11:16:26 INFO  SpringContextShutdownHook org.quartz.core.QuartzScheduler Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2020-11-05 11:16:26 INFO  SpringContextShutdownHook org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Shutting down ExecutorService 'clsAsyncThreadPool'
+2020-11-05 11:16:30 INFO  main com.cls.CLSApplication Starting CLSApplication on hp-PC with PID 13928 (started by Administrator in E:\华夏明科项目\中国法学会课题管理系统\代码\china-law-society)
+2020-11-05 11:16:30 INFO  main com.cls.CLSApplication The following profiles are active: dev
+2020-11-05 11:16:32 INFO  main org.springframework.data.repository.config.RepositoryConfigurationDelegate Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-05 11:16:32 INFO  main org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-05 11:16:32 INFO  main org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 52ms. Found 0 Redis repository interfaces.
+2020-11-05 11:16:33 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:33 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$ddcfb56b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:33 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:33 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dynamicDatasourceAnnotationAdvisor' of type [com.baomidou.dynamic.datasource.aop.DynamicDataSourceAnnotationAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:33 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'myProperties' of type [com.cls.common.properties.MyProperties$$EnhancerBySpringCGLIB$$1e65a7c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:33 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'shiroConfig' of type [com.cls.common.authentication.ShiroConfig$$EnhancerBySpringCGLIB$$a67fd04e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:33 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:33 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'mybatisPlusConfigure' of type [com.cls.common.configure.MybatisPlusConfigure$$EnhancerBySpringCGLIB$$aca37752] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:33 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dataPermissionInterceptor' of type [com.cls.common.interceptor.DataPermissionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:33 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'desensitizationInterceptor' of type [com.cls.common.interceptor.DesensitizationInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:33 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'pageHelper' of type [com.github.pagehelper.PageHelper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:33 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$b209b134] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:33 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dataSourceCreator' of type [com.baomidou.dynamic.datasource.creator.DataSourceCreator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:33 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dynamicDataSourceProvider' of type [com.baomidou.dynamic.datasource.provider.YmlDynamicDataSourceProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:33 INFO  main com.baomidou.dynamic.datasource.DynamicRoutingDataSource dynamic-datasource detect P6SPY plugin and enabled it
+2020-11-05 11:16:33 INFO  main com.zaxxer.hikari.HikariDataSource base - Starting...
+2020-11-05 11:16:33 INFO  main com.zaxxer.hikari.HikariDataSource base - Start completed.
+2020-11-05 11:16:33 INFO  main com.baomidou.dynamic.datasource.DynamicRoutingDataSource dynamic-datasource [base] wrap p6spy plugin
+2020-11-05 11:16:33 INFO  main com.baomidou.dynamic.datasource.DynamicRoutingDataSource dynamic-datasource - load a datasource named [base] success
+2020-11-05 11:16:33 INFO  main com.baomidou.dynamic.datasource.DynamicRoutingDataSource dynamic-datasource initial loaded [1] datasource,primary datasource named [base]
+2020-11-05 11:16:33 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dataSource' of type [com.baomidou.dynamic.datasource.DynamicRoutingDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:33 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:33 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:33 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'mybatisMetaObjectHandler' of type [com.cls.common.handler.MybatisMetaObjectHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:34 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:34 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:34 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'roleMenuMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:34 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'roleMenuMapper' of type [com.sun.proxy.$Proxy118] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:34 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'roleMenuServiceImpl' of type [com.cls.system.service.impl.RoleMenuServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:34 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'menuMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:34 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'menuMapper' of type [com.sun.proxy.$Proxy120] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:34 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'menuServiceImpl' of type [com.cls.system.service.impl.MenuServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:34 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:34 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userRoleMapper' of type [com.sun.proxy.$Proxy122] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:34 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userRoleServiceImpl' of type [com.cls.system.service.impl.UserRoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:34 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userDataPermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:34 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userDataPermissionMapper' of type [com.sun.proxy.$Proxy124] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:34 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userDataPermissionService' of type [com.cls.system.service.impl.UserDataPermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:34 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:34 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userMapper' of type [com.sun.proxy.$Proxy126] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:34 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'userServiceImpl' of type [com.cls.system.service.impl.UserServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:34 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'roleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:34 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'roleMapper' of type [com.sun.proxy.$Proxy129] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:34 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'roleServiceImpl' of type [com.cls.system.service.impl.RoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:34 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'shiroRealm' of type [com.cls.common.authentication.ShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:35 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'redisSessionDAO' of type [org.crazycake.shiro.RedisSessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:35 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'sessionManager' of type [org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:35 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:35 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:16:35 INFO  main org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8080 (http)
+2020-11-05 11:16:35 INFO  main org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-05 11:16:35 INFO  main org.apache.catalina.core.StandardService Starting service [Tomcat]
+2020-11-05 11:16:35 INFO  main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-11-05 11:16:35 INFO  main org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2020-11-05 11:16:35 INFO  main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 4797 ms
+2020-11-05 11:16:36 INFO  main com.cls.common.xss.XssFilter ------------ xss filter init ------------
+2020-11-05 11:16:37 INFO  main org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-11-05 11:16:38 INFO  main springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-11-05 11:16:38 INFO  main org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService
+2020-11-05 11:16:38 INFO  main org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService 'clsAsyncThreadPool'
+2020-11-05 11:16:38 INFO  main org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping Adding welcome page template: index
+2020-11-05 11:16:38 INFO  main org.quartz.impl.StdSchedulerFactory Using default implementation for ThreadExecutor
+2020-11-05 11:16:38 INFO  main org.quartz.core.SchedulerSignalerImpl Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-11-05 11:16:38 INFO  main org.quartz.core.QuartzScheduler Quartz Scheduler v.2.3.2 created.
+2020-11-05 11:16:38 INFO  main org.quartz.simpl.RAMJobStore RAMJobStore initialized.
+2020-11-05 11:16:38 INFO  main org.quartz.core.QuartzScheduler Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-11-05 11:16:38 INFO  main org.quartz.impl.StdSchedulerFactory Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2020-11-05 11:16:38 INFO  main org.quartz.impl.StdSchedulerFactory Quartz scheduler version: 2.3.2
+2020-11-05 11:16:38 INFO  main org.quartz.core.QuartzScheduler JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@844f8a
+2020-11-05 11:16:38 INFO  main springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Context refreshed
+2020-11-05 11:16:38 INFO  main springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+2020-11-05 11:16:39 INFO  main springfox.documentation.spring.web.scanners.ApiListingReferenceScanner Scanning for api listing references
+2020-11-05 11:16:39 INFO  main org.springframework.scheduling.quartz.SchedulerFactoryBean Starting Quartz Scheduler now
+2020-11-05 11:16:39 INFO  main org.quartz.core.QuartzScheduler Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2020-11-05 11:16:39 INFO  main org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"]
+2020-11-05 11:16:39 INFO  main org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-05 11:16:39 INFO  main com.cls.CLSApplication Started CLSApplication in 8.908 seconds (JVM running for 10.391)
+2020-11-05 11:16:39 INFO  main io.lettuce.core.EpollProvider Starting without optional epoll library
+2020-11-05 11:16:39 INFO  main io.lettuce.core.KqueueProvider Starting without optional kqueue library
+2020-11-05 11:16:39 INFO  main com.cls.common.runner.MyStartedUpRunner  __    ___   _      ___   _     ____ _____  ____ 
+2020-11-05 11:16:39 INFO  main com.cls.common.runner.MyStartedUpRunner / /`  / / \ | |\/| | |_) | |   | |_   | |  | |_  
+2020-11-05 11:16:39 INFO  main com.cls.common.runner.MyStartedUpRunner \_\_, \_\_/ |_|  | |_|   |_|__ |_|__  |_|  |_|__ 
+2020-11-05 11:16:39 INFO  main com.cls.common.runner.MyStartedUpRunner                                                       
+2020-11-05 11:16:39 INFO  main com.cls.common.runner.MyStartedUpRunner 权限系统启动完毕，地址：http://192.168.214.2:8080/login
+2020-11-05 11:16:39 INFO  http-nio-8080-exec-2 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-05 11:16:39 INFO  http-nio-8080-exec-2 org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2020-11-05 11:16:40 INFO  http-nio-8080-exec-2 org.springframework.web.servlet.DispatcherServlet Completed initialization in 20 ms
+2020-11-05 11:16:40 INFO  http-nio-8080-exec-2 org.apache.shiro.session.mgt.AbstractValidatingSessionManager Enabling session validation scheduler...
+2020-11-05 11:16:40 INFO  http-nio-8080-exec-1 com.cls.common.aspect.LimitAspect IP:192.168.214.2 第 1 次访问key为 [limit_login192.168.214.2]，描述为 [登录接口] 的接口
+2020-11-05 11:16:40 INFO  http-nio-8080-exec-1 p6spy 2020-11-05 11:16:40 | 耗时 3 ms | SQL 语句：
+SELECT u.user_id userId, u.username, u.email, u.mobile, u.password, u.status, u.create_time createTime, u.ssex sex, u.dept_id deptId, u.last_login_time lastLoginTime, u.modify_time modifyTime, u.description, u.avatar, u.theme, u.is_tab isTab, d.dept_name deptName, GROUP_CONCAT(r.role_id) roleId, GROUP_CONCAT(r.ROLE_NAME) roleName FROM sys_user u LEFT JOIN sys_dept d ON (u.dept_id = d.dept_id) LEFT JOIN sys_user_role ur ON (u.user_id = ur.user_id) LEFT JOIN sys_role r ON r.role_id = ur.role_id WHERE u.username = 'admin' GROUP BY u.username, u.user_id, u.email, u.mobile, u.password, u.status, u.create_time, u.ssex, u.dept_id, u.last_login_time, u.modify_time, u.description, u.avatar, u.theme, u.is_tab;
+2020-11-05 11:16:41 INFO  http-nio-8080-exec-3 com.cls.common.aspect.LimitAspect IP:192.168.214.2 第 1 次访问key为 [limit_get_captcha192.168.214.2]，描述为 [获取验证码] 的接口
+2020-11-05 11:16:41 INFO  http-nio-8080-exec-1 p6spy 2020-11-05 11:16:41 | 耗时 1 ms | SQL 语句：
+SELECT USER_ID,dept_id FROM sys_user_data_permission WHERE (USER_ID = '8');
+2020-11-05 11:16:41 INFO  http-nio-8080-exec-1 p6spy 2020-11-05 11:16:41 | 耗时 1 ms | SQL 语句：
+INSERT INTO sys_login_log ( USERNAME, LOGIN_TIME, IP, `SYSTEM`, BROWSER ) VALUES ( 'admin', '2020-11-05T11:16:41.263+0800', '192.168.214.2', 'Windows ', 'Chrome 84' );
+2020-11-05 11:16:41 INFO  http-nio-8080-exec-5 p6spy 2020-11-05 11:16:41 | 耗时 2 ms | SQL 语句：
+SELECT r.* FROM sys_role r LEFT JOIN sys_user_role ur ON (r.role_id = ur.role_id) LEFT JOIN sys_user u ON (u.user_id = ur.user_id) WHERE r.is_delete=0 and u.is_delete=0 and u.username = 'admin';
+2020-11-05 11:16:41 INFO  http-nio-8080-exec-5 p6spy 2020-11-05 11:16:41 | 耗时 10 ms | SQL 语句：
+SELECT m.perms FROM sys_role r LEFT JOIN sys_user_role ur ON (r.role_id = ur.role_id) LEFT JOIN sys_user u ON (u.user_id = ur.user_id) LEFT JOIN sys_role_menu rm ON (rm.role_id = r.role_id) LEFT JOIN sys_menu m ON (m.menu_id = rm.menu_id) WHERE u.username = 'admin' AND m.perms is not null AND m.perms <> '';
+2020-11-05 11:16:41 INFO  http-nio-8080-exec-5 p6spy 2020-11-05 11:16:41 | 耗时 3 ms | SQL 语句：
+SELECT u.user_id userId, u.username, u.email, u.mobile, u.password, u.status, u.create_time createTime, u.ssex sex, u.dept_id deptId, u.last_login_time lastLoginTime, u.modify_time modifyTime, u.description, u.avatar, u.theme, u.is_tab isTab, d.dept_name deptName, GROUP_CONCAT(r.role_id) roleId, GROUP_CONCAT(r.ROLE_NAME) roleName FROM sys_user u LEFT JOIN sys_dept d ON (u.dept_id = d.dept_id) LEFT JOIN sys_user_role ur ON (u.user_id = ur.user_id) LEFT JOIN sys_role r ON r.role_id = ur.role_id WHERE u.username = 'admin' GROUP BY u.username, u.user_id, u.email, u.mobile, u.password, u.status, u.create_time, u.ssex, u.dept_id, u.last_login_time, u.modify_time, u.description, u.avatar, u.theme, u.is_tab;
+2020-11-05 11:16:46 INFO  http-nio-8080-exec-10 com.cls.common.aspect.LimitAspect IP:192.168.214.2 第 2 次访问key为 [limit_login192.168.214.2]，描述为 [登录接口] 的接口
+2020-11-05 11:16:46 INFO  http-nio-8080-exec-10 p6spy 2020-11-05 11:16:46 | 耗时 3 ms | SQL 语句：
+SELECT u.user_id userId, u.username, u.email, u.mobile, u.password, u.status, u.create_time createTime, u.ssex sex, u.dept_id deptId, u.last_login_time lastLoginTime, u.modify_time modifyTime, u.description, u.avatar, u.theme, u.is_tab isTab, d.dept_name deptName, GROUP_CONCAT(r.role_id) roleId, GROUP_CONCAT(r.ROLE_NAME) roleName FROM sys_user u LEFT JOIN sys_dept d ON (u.dept_id = d.dept_id) LEFT JOIN sys_user_role ur ON (u.user_id = ur.user_id) LEFT JOIN sys_role r ON r.role_id = ur.role_id WHERE u.username = 'admin' GROUP BY u.username, u.user_id, u.email, u.mobile, u.password, u.status, u.create_time, u.ssex, u.dept_id, u.last_login_time, u.modify_time, u.description, u.avatar, u.theme, u.is_tab;
+2020-11-05 11:16:46 INFO  http-nio-8080-exec-10 p6spy 2020-11-05 11:16:46 | 耗时 1 ms | SQL 语句：
+SELECT USER_ID,dept_id FROM sys_user_data_permission WHERE (USER_ID = '8');
+2020-11-05 11:16:46 INFO  http-nio-8080-exec-10 p6spy 2020-11-05 11:16:46 | 耗时 1 ms | SQL 语句：
+INSERT INTO sys_login_log ( USERNAME, LOGIN_TIME, IP, `SYSTEM`, BROWSER ) VALUES ( 'admin', '2020-11-05T11:16:46.052+0800', '192.168.214.2', 'Windows ', 'Chrome 84' );
+2020-11-05 11:16:46 INFO  http-nio-8080-exec-2 p6spy 2020-11-05 11:16:46 | 耗时 1 ms | SQL 语句：
+SELECT r.* FROM sys_role r LEFT JOIN sys_user_role ur ON (r.role_id = ur.role_id) LEFT JOIN sys_user u ON (u.user_id = ur.user_id) WHERE r.is_delete=0 and u.is_delete=0 and u.username = 'admin';
+2020-11-05 11:16:46 INFO  http-nio-8080-exec-2 p6spy 2020-11-05 11:16:46 | 耗时 2 ms | SQL 语句：
+SELECT m.perms FROM sys_role r LEFT JOIN sys_user_role ur ON (r.role_id = ur.role_id) LEFT JOIN sys_user u ON (u.user_id = ur.user_id) LEFT JOIN sys_role_menu rm ON (rm.role_id = r.role_id) LEFT JOIN sys_menu m ON (m.menu_id = rm.menu_id) WHERE u.username = 'admin' AND m.perms is not null AND m.perms <> '';
+2020-11-05 11:16:46 INFO  http-nio-8080-exec-2 p6spy 2020-11-05 11:16:46 | 耗时 2 ms | SQL 语句：
+SELECT u.user_id userId, u.username, u.email, u.mobile, u.password, u.status, u.create_time createTime, u.ssex sex, u.dept_id deptId, u.last_login_time lastLoginTime, u.modify_time modifyTime, u.description, u.avatar, u.theme, u.is_tab isTab, d.dept_name deptName, GROUP_CONCAT(r.role_id) roleId, GROUP_CONCAT(r.ROLE_NAME) roleName FROM sys_user u LEFT JOIN sys_dept d ON (u.dept_id = d.dept_id) LEFT JOIN sys_user_role ur ON (u.user_id = ur.user_id) LEFT JOIN sys_role r ON r.role_id = ur.role_id WHERE u.username = 'admin' GROUP BY u.username, u.user_id, u.email, u.mobile, u.password, u.status, u.create_time, u.ssex, u.dept_id, u.last_login_time, u.modify_time, u.description, u.avatar, u.theme, u.is_tab;
+2020-11-05 11:16:55 INFO  http-nio-8080-exec-6 p6spy 2020-11-05 11:16:55 | 耗时 8 ms | SQL 语句：
+SELECT m.* FROM sys_menu m WHERE m.type <> 1 AND m.MENU_ID IN ( SELECT DISTINCT rm.menu_id FROM sys_role_menu rm LEFT JOIN sys_role r ON (rm.role_id = r.role_id) LEFT JOIN sys_user_role ur ON (ur.role_id = r.role_id) LEFT JOIN sys_user u ON (u.user_id = ur.user_id) WHERE u.username = 'admin' ) ORDER BY m.order_num;
+2020-11-05 11:16:56 INFO  http-nio-8080-exec-1 p6spy 2020-11-05 11:16:56 | 耗时 1 ms | SQL 语句：
+select count(1) from sys_login_log;
+2020-11-05 11:16:56 INFO  http-nio-8080-exec-1 p6spy 2020-11-05 11:16:56 | 耗时 1 ms | SQL 语句：
+SELECT count(1) FROM sys_login_log WHERE login_time between CURDATE() and DATE_ADD(CURDATE(), INTERVAL 1 DAY);
+2020-11-05 11:16:56 INFO  My-Async-Thread1 com.cls.common.handler.MybatisMetaObjectHandler start update fill ....
+2020-11-05 11:16:56 INFO  http-nio-8080-exec-1 p6spy 2020-11-05 11:16:56 | 耗时 1 ms | SQL 语句：
+SELECT count(DISTINCT(ip)) FROM sys_login_log WHERE login_time between CURDATE() and DATE_ADD(CURDATE(), INTERVAL 1 DAY);
+2020-11-05 11:16:56 INFO  My-Async-Thread1 p6spy 2020-11-05 11:16:56 | 耗时 2 ms | SQL 语句：
+UPDATE sys_user SET LAST_LOGIN_TIME='2020-11-05T11:16:56.148+0800', modify_by=8, MODIFY_TIME='2020-11-05T11:16:56.157+0800' WHERE is_delete=false AND (USERNAME = 'admin');
+2020-11-05 11:16:56 INFO  http-nio-8080-exec-1 p6spy 2020-11-05 11:16:56 | 耗时 1 ms | SQL 语句：
+select date_format(l.login_time, '%m-%d') days, count(1) count from ( select * from sys_login_log where date_sub(curdate(), interval 10 day) <= date(login_time) ) as l where 1 = 1 group by days;
+2020-11-05 11:16:56 INFO  http-nio-8080-exec-1 p6spy 2020-11-05 11:16:56 | 耗时 1 ms | SQL 语句：
+select date_format(l.login_time, '%m-%d') days, count(1) count from ( select * from sys_login_log where date_sub(curdate(), interval 10 day) <= date(login_time) ) as l where 1 = 1 and l.username = 'admin' group by days;
+2020-11-05 11:17:04 INFO  http-nio-8080-exec-5 com.cls.common.handler.MybatisMetaObjectHandler start update fill ....
+2020-11-05 11:17:04 INFO  http-nio-8080-exec-5 p6spy 2020-11-05 11:17:04 | 耗时 1 ms | SQL 语句：
+UPDATE sys_user SET PASSWORD='856aea89ad509f163284abb75579dcfc', modify_by=8, MODIFY_TIME='2020-11-05T11:17:04.907+0800' WHERE is_delete=false AND (USERNAME = 'admin');
+2020-11-05 11:17:06 INFO  http-nio-8080-exec-3 com.cls.common.aspect.LimitAspect IP:192.168.214.2 第 2 次访问key为 [limit_get_captcha192.168.214.2]，描述为 [获取验证码] 的接口
+2020-11-05 11:17:13 INFO  http-nio-8080-exec-6 com.cls.common.aspect.LimitAspect IP:192.168.214.2 第 3 次访问key为 [limit_login192.168.214.2]，描述为 [登录接口] 的接口
+2020-11-05 11:17:13 INFO  http-nio-8080-exec-6 p6spy 2020-11-05 11:17:13 | 耗时 2 ms | SQL 语句：
+SELECT u.user_id userId, u.username, u.email, u.mobile, u.password, u.status, u.create_time createTime, u.ssex sex, u.dept_id deptId, u.last_login_time lastLoginTime, u.modify_time modifyTime, u.description, u.avatar, u.theme, u.is_tab isTab, d.dept_name deptName, GROUP_CONCAT(r.role_id) roleId, GROUP_CONCAT(r.ROLE_NAME) roleName FROM sys_user u LEFT JOIN sys_dept d ON (u.dept_id = d.dept_id) LEFT JOIN sys_user_role ur ON (u.user_id = ur.user_id) LEFT JOIN sys_role r ON r.role_id = ur.role_id WHERE u.username = 'admin' GROUP BY u.username, u.user_id, u.email, u.mobile, u.password, u.status, u.create_time, u.ssex, u.dept_id, u.last_login_time, u.modify_time, u.description, u.avatar, u.theme, u.is_tab;
+2020-11-05 11:17:13 INFO  http-nio-8080-exec-6 p6spy 2020-11-05 11:17:13 | 耗时 1 ms | SQL 语句：
+SELECT USER_ID,dept_id FROM sys_user_data_permission WHERE (USER_ID = '8');
+2020-11-05 11:17:13 INFO  http-nio-8080-exec-6 p6spy 2020-11-05 11:17:13 | 耗时 2 ms | SQL 语句：
+INSERT INTO sys_login_log ( USERNAME, LOGIN_TIME, IP, `SYSTEM`, BROWSER ) VALUES ( 'admin', '2020-11-05T11:17:13.255+0800', '192.168.214.2', 'Windows ', 'Chrome 84' );
+2020-11-05 11:17:13 INFO  http-nio-8080-exec-2 p6spy 2020-11-05 11:17:13 | 耗时 1 ms | SQL 语句：
+SELECT r.* FROM sys_role r LEFT JOIN sys_user_role ur ON (r.role_id = ur.role_id) LEFT JOIN sys_user u ON (u.user_id = ur.user_id) WHERE r.is_delete=0 and u.is_delete=0 and u.username = 'admin';
+2020-11-05 11:17:13 INFO  http-nio-8080-exec-2 p6spy 2020-11-05 11:17:13 | 耗时 2 ms | SQL 语句：
+SELECT m.perms FROM sys_role r LEFT JOIN sys_user_role ur ON (r.role_id = ur.role_id) LEFT JOIN sys_user u ON (u.user_id = ur.user_id) LEFT JOIN sys_role_menu rm ON (rm.role_id = r.role_id) LEFT JOIN sys_menu m ON (m.menu_id = rm.menu_id) WHERE u.username = 'admin' AND m.perms is not null AND m.perms <> '';
+2020-11-05 11:17:13 INFO  http-nio-8080-exec-2 p6spy 2020-11-05 11:17:13 | 耗时 2 ms | SQL 语句：
+SELECT u.user_id userId, u.username, u.email, u.mobile, u.password, u.status, u.create_time createTime, u.ssex sex, u.dept_id deptId, u.last_login_time lastLoginTime, u.modify_time modifyTime, u.description, u.avatar, u.theme, u.is_tab isTab, d.dept_name deptName, GROUP_CONCAT(r.role_id) roleId, GROUP_CONCAT(r.ROLE_NAME) roleName FROM sys_user u LEFT JOIN sys_dept d ON (u.dept_id = d.dept_id) LEFT JOIN sys_user_role ur ON (u.user_id = ur.user_id) LEFT JOIN sys_role r ON r.role_id = ur.role_id WHERE u.username = 'admin' GROUP BY u.username, u.user_id, u.email, u.mobile, u.password, u.status, u.create_time, u.ssex, u.dept_id, u.last_login_time, u.modify_time, u.description, u.avatar, u.theme, u.is_tab;
+2020-11-05 11:17:13 INFO  http-nio-8080-exec-9 p6spy 2020-11-05 11:17:13 | 耗时 14 ms | SQL 语句：
+SELECT m.* FROM sys_menu m WHERE m.type <> 1 AND m.MENU_ID IN ( SELECT DISTINCT rm.menu_id FROM sys_role_menu rm LEFT JOIN sys_role r ON (rm.role_id = r.role_id) LEFT JOIN sys_user_role ur ON (ur.role_id = r.role_id) LEFT JOIN sys_user u ON (u.user_id = ur.user_id) WHERE u.username = 'admin' ) ORDER BY m.order_num;
+2020-11-05 11:17:13 INFO  http-nio-8080-exec-4 p6spy 2020-11-05 11:17:13 | 耗时 1 ms | SQL 语句：
+select count(1) from sys_login_log;
+2020-11-05 11:17:13 INFO  http-nio-8080-exec-4 p6spy 2020-11-05 11:17:13 | 耗时 1 ms | SQL 语句：
+SELECT count(1) FROM sys_login_log WHERE login_time between CURDATE() and DATE_ADD(CURDATE(), INTERVAL 1 DAY);
+2020-11-05 11:17:13 INFO  My-Async-Thread2 com.cls.common.handler.MybatisMetaObjectHandler start update fill ....
+2020-11-05 11:17:13 INFO  http-nio-8080-exec-4 p6spy 2020-11-05 11:17:13 | 耗时 1 ms | SQL 语句：
+SELECT count(DISTINCT(ip)) FROM sys_login_log WHERE login_time between CURDATE() and DATE_ADD(CURDATE(), INTERVAL 1 DAY);
+2020-11-05 11:17:13 INFO  My-Async-Thread2 p6spy 2020-11-05 11:17:13 | 耗时 1 ms | SQL 语句：
+UPDATE sys_user SET LAST_LOGIN_TIME='2020-11-05T11:17:13.814+0800', modify_by=8, MODIFY_TIME='2020-11-05T11:17:13.819+0800' WHERE is_delete=false AND (USERNAME = 'admin');
+2020-11-05 11:17:13 INFO  http-nio-8080-exec-4 p6spy 2020-11-05 11:17:13 | 耗时 1 ms | SQL 语句：
+select date_format(l.login_time, '%m-%d') days, count(1) count from ( select * from sys_login_log where date_sub(curdate(), interval 10 day) <= date(login_time) ) as l where 1 = 1 group by days;
+2020-11-05 11:17:13 INFO  http-nio-8080-exec-4 p6spy 2020-11-05 11:17:13 | 耗时 1 ms | SQL 语句：
+select date_format(l.login_time, '%m-%d') days, count(1) count from ( select * from sys_login_log where date_sub(curdate(), interval 10 day) <= date(login_time) ) as l where 1 = 1 and l.username = 'admin' group by days;
+2020-11-05 11:21:34 INFO  http-nio-8080-exec-1 p6spy 2020-11-05 11:21:34 | 耗时 1 ms | SQL 语句：
+SELECT r.* FROM sys_role r LEFT JOIN sys_user_role ur ON (r.role_id = ur.role_id) LEFT JOIN sys_user u ON (u.user_id = ur.user_id) WHERE r.is_delete=0 and u.is_delete=0 and u.username = 'admin';
+2020-11-05 11:21:34 INFO  http-nio-8080-exec-1 p6spy 2020-11-05 11:21:34 | 耗时 2 ms | SQL 语句：
+SELECT m.perms FROM sys_role r LEFT JOIN sys_user_role ur ON (r.role_id = ur.role_id) LEFT JOIN sys_user u ON (u.user_id = ur.user_id) LEFT JOIN sys_role_menu rm ON (rm.role_id = r.role_id) LEFT JOIN sys_menu m ON (m.menu_id = rm.menu_id) WHERE u.username = 'admin' AND m.perms is not null AND m.perms <> '';
+2020-11-05 11:21:34 INFO  http-nio-8080-exec-4 p6spy 2020-11-05 11:21:34 | 耗时 2 ms | SQL 语句：
+SELECT MENU_ID,PARENT_ID,MENU_NAME,URL,PERMS,ICON,TYPE,ORDER_NUM,create_by,modify_by,CREATE_TIME,MODIFY_TIME,is_delete FROM sys_menu WHERE is_delete=false ORDER BY ORDER_NUM ASC;
+2020-11-05 11:21:42 INFO  http-nio-8080-exec-10 p6spy 2020-11-05 11:21:42 | 耗时 2 ms | SQL 语句：
+UPDATE sys_menu SET is_delete=true WHERE MENU_ID IN ( '179' , '180' , '181' , '182' ) AND is_delete=false;
+2020-11-05 11:21:42 INFO  http-nio-8080-exec-10 p6spy 2020-11-05 11:21:42 | 耗时 1 ms | SQL 语句：
+SELECT MENU_ID,PARENT_ID,MENU_NAME,URL,PERMS,ICON,TYPE,ORDER_NUM,create_by,modify_by,CREATE_TIME,MODIFY_TIME,is_delete FROM sys_menu WHERE is_delete=false AND (PARENT_ID IN ('179','180','181','182'));
+2020-11-05 11:21:42 INFO  http-nio-8080-exec-10 p6spy 2020-11-05 11:21:42 | 耗时 2 ms | SQL 语句：
+DELETE FROM sys_role_menu WHERE (MENU_ID IN ('179','180','181','182'));
+2020-11-05 11:21:42 INFO  My-Async-Thread3 p6spy 2020-11-05 11:21:42 | 耗时 2 ms | SQL 语句：
+INSERT INTO sys_log ( USERNAME, OPERATION, TIME, METHOD, PARAMS, IP, CREATE_TIME ) VALUES ( 'admin', '删除菜单/按钮', 76, 'com.cls.system.controller.MenuController.deleteMenus()', ' menuIds: "179,180,181,182"', '192.168.214.2', '2020-11-05T11:21:42.286+0800' );
+2020-11-05 11:21:42 INFO  http-nio-8080-exec-3 p6spy 2020-11-05 11:21:42 | 耗时 3 ms | SQL 语句：
+SELECT MENU_ID,PARENT_ID,MENU_NAME,URL,PERMS,ICON,TYPE,ORDER_NUM,create_by,modify_by,CREATE_TIME,MODIFY_TIME,is_delete FROM sys_menu WHERE is_delete=false ORDER BY ORDER_NUM ASC;
+2020-11-05 11:21:44 INFO  http-nio-8080-exec-8 p6spy 2020-11-05 11:21:44 | 耗时 1 ms | SQL 语句：
+SELECT r.* FROM sys_role r LEFT JOIN sys_user_role ur ON (r.role_id = ur.role_id) LEFT JOIN sys_user u ON (u.user_id = ur.user_id) WHERE r.is_delete=0 and u.is_delete=0 and u.username = 'admin';
+2020-11-05 11:21:44 INFO  http-nio-8080-exec-8 p6spy 2020-11-05 11:21:44 | 耗时 2 ms | SQL 语句：
+SELECT m.perms FROM sys_role r LEFT JOIN sys_user_role ur ON (r.role_id = ur.role_id) LEFT JOIN sys_user u ON (u.user_id = ur.user_id) LEFT JOIN sys_role_menu rm ON (rm.role_id = r.role_id) LEFT JOIN sys_menu m ON (m.menu_id = rm.menu_id) WHERE u.username = 'admin' AND m.perms is not null AND m.perms <> '';
+2020-11-05 11:21:44 INFO  http-nio-8080-exec-8 p6spy 2020-11-05 11:21:44 | 耗时 2 ms | SQL 语句：
+SELECT u.user_id userId, u.username, u.email, u.mobile, u.password, u.status, u.create_time createTime, u.ssex sex, u.dept_id deptId, u.last_login_time lastLoginTime, u.modify_time modifyTime, u.description, u.avatar, u.theme, u.is_tab isTab, d.dept_name deptName, GROUP_CONCAT(r.role_id) roleId, GROUP_CONCAT(r.ROLE_NAME) roleName FROM sys_user u LEFT JOIN sys_dept d ON (u.dept_id = d.dept_id) LEFT JOIN sys_user_role ur ON (u.user_id = ur.user_id) LEFT JOIN sys_role r ON r.role_id = ur.role_id WHERE u.username = 'admin' GROUP BY u.username, u.user_id, u.email, u.mobile, u.password, u.status, u.create_time, u.ssex, u.dept_id, u.last_login_time, u.modify_time, u.description, u.avatar, u.theme, u.is_tab;
+2020-11-05 11:21:44 INFO  http-nio-8080-exec-5 p6spy 2020-11-05 11:21:44 | 耗时 9 ms | SQL 语句：
+SELECT m.* FROM sys_menu m WHERE m.type <> 1 AND m.MENU_ID IN ( SELECT DISTINCT rm.menu_id FROM sys_role_menu rm LEFT JOIN sys_role r ON (rm.role_id = r.role_id) LEFT JOIN sys_user_role ur ON (ur.role_id = r.role_id) LEFT JOIN sys_user u ON (u.user_id = ur.user_id) WHERE u.username = 'admin' ) ORDER BY m.order_num;
+2020-11-05 11:21:44 INFO  http-nio-8080-exec-4 p6spy 2020-11-05 11:21:44 | 耗时 2 ms | SQL 语句：
+SELECT r.* FROM sys_role r LEFT JOIN sys_user_role ur ON (r.role_id = ur.role_id) LEFT JOIN sys_user u ON (u.user_id = ur.user_id) WHERE r.is_delete=0 and u.is_delete=0 and u.username = 'admin';
+2020-11-05 11:21:44 INFO  http-nio-8080-exec-4 p6spy 2020-11-05 11:21:44 | 耗时 2 ms | SQL 语句：
+SELECT m.perms FROM sys_role r LEFT JOIN sys_user_role ur ON (r.role_id = ur.role_id) LEFT JOIN sys_user u ON (u.user_id = ur.user_id) LEFT JOIN sys_role_menu rm ON (rm.role_id = r.role_id) LEFT JOIN sys_menu m ON (m.menu_id = rm.menu_id) WHERE u.username = 'admin' AND m.perms is not null AND m.perms <> '';
+2020-11-05 11:21:44 INFO  http-nio-8080-exec-10 p6spy 2020-11-05 11:21:44 | 耗时 15 ms | SQL 语句：
+SELECT m.* FROM sys_menu m WHERE m.type <> 1 AND m.MENU_ID IN ( SELECT DISTINCT rm.menu_id FROM sys_role_menu rm LEFT JOIN sys_role r ON (rm.role_id = r.role_id) LEFT JOIN sys_user_role ur ON (ur.role_id = r.role_id) LEFT JOIN sys_user u ON (u.user_id = ur.user_id) WHERE u.username = 'admin' ) ORDER BY m.order_num;
+2020-11-05 11:21:45 INFO  http-nio-8080-exec-3 p6spy 2020-11-05 11:21:45 | 耗时 1 ms | SQL 语句：
+select count(1) from sys_login_log;
+2020-11-05 11:21:45 INFO  http-nio-8080-exec-3 p6spy 2020-11-05 11:21:45 | 耗时 1 ms | SQL 语句：
+SELECT count(1) FROM sys_login_log WHERE login_time between CURDATE() and DATE_ADD(CURDATE(), INTERVAL 1 DAY);
+2020-11-05 11:21:45 INFO  My-Async-Thread4 com.cls.common.handler.MybatisMetaObjectHandler start update fill ....
+2020-11-05 11:21:45 INFO  http-nio-8080-exec-3 p6spy 2020-11-05 11:21:45 | 耗时 1 ms | SQL 语句：
+SELECT count(DISTINCT(ip)) FROM sys_login_log WHERE login_time between CURDATE() and DATE_ADD(CURDATE(), INTERVAL 1 DAY);
+2020-11-05 11:21:45 INFO  My-Async-Thread4 p6spy 2020-11-05 11:21:45 | 耗时 1 ms | SQL 语句：
+UPDATE sys_user SET LAST_LOGIN_TIME='2020-11-05T11:21:45.016+0800', modify_by=8, MODIFY_TIME='2020-11-05T11:21:45.020+0800' WHERE is_delete=false AND (USERNAME = 'admin');
+2020-11-05 11:21:45 INFO  http-nio-8080-exec-3 p6spy 2020-11-05 11:21:45 | 耗时 1 ms | SQL 语句：
+select date_format(l.login_time, '%m-%d') days, count(1) count from ( select * from sys_login_log where date_sub(curdate(), interval 10 day) <= date(login_time) ) as l where 1 = 1 group by days;
+2020-11-05 11:21:45 INFO  http-nio-8080-exec-3 p6spy 2020-11-05 11:21:45 | 耗时 1 ms | SQL 语句：
+select date_format(l.login_time, '%m-%d') days, count(1) count from ( select * from sys_login_log where date_sub(curdate(), interval 10 day) <= date(login_time) ) as l where 1 = 1 and l.username = 'admin' group by days;
+2020-11-05 11:21:45 INFO  http-nio-8080-exec-2 p6spy 2020-11-05 11:21:45 | 耗时 2 ms | SQL 语句：
+SELECT MENU_ID,PARENT_ID,MENU_NAME,URL,PERMS,ICON,TYPE,ORDER_NUM,create_by,modify_by,CREATE_TIME,MODIFY_TIME,is_delete FROM sys_menu WHERE is_delete=false ORDER BY ORDER_NUM ASC;
+2020-11-05 11:31:57 INFO  SpringContextShutdownHook org.quartz.core.QuartzScheduler Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2020-11-05 11:31:57 INFO  SpringContextShutdownHook org.springframework.scheduling.quartz.SchedulerFactoryBean Shutting down Quartz Scheduler
+2020-11-05 11:31:57 INFO  SpringContextShutdownHook org.quartz.core.QuartzScheduler Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2020-11-05 11:31:57 INFO  SpringContextShutdownHook org.quartz.core.QuartzScheduler Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2020-11-05 11:31:57 INFO  SpringContextShutdownHook org.quartz.core.QuartzScheduler Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2020-11-05 11:31:57 INFO  SpringContextShutdownHook org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Shutting down ExecutorService 'clsAsyncThreadPool'

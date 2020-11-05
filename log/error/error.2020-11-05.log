@@ -1,0 +1,18 @@
+2020-11-05 11:06:55 ERROR main org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-11-05 11:16:41 ERROR http-nio-8080-exec-1 com.cls.common.utils.AddressUtil 获取IP地址失败，null
+2020-11-05 11:16:46 ERROR http-nio-8080-exec-10 com.cls.common.utils.AddressUtil 获取IP地址失败，null
+2020-11-05 11:17:13 ERROR http-nio-8080-exec-6 com.cls.common.utils.AddressUtil 获取IP地址失败，null
+2020-11-05 11:21:42 ERROR My-Async-Thread3 com.cls.common.utils.AddressUtil 获取IP地址失败，null

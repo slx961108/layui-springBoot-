@@ -21,5 +21,4 @@ public class CLSApplication {
                 .web(WebApplicationType.SERVLET)
                 .run(args);
     }
-
 }

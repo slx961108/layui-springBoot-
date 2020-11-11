@@ -1,0 +1,327 @@
+<div class="layui-fluid layui-anim website-anim" id="website-expert" lay-title="专家管理">
+    <div class="layui-row website-container">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body website-table-full">
+                    <form class="layui-form layui-table-form" lay-filter="expert-table-form">
+                        <div class="layui-row">
+                            <div class="layui-col-md8">
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label layui-form-label-sm">关键词</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="name" autocomplete="off" class="layui-input" placeholder="请输入专家姓名/所在单位">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label layui-form-label-sm">学科分类</label>
+                                        <div class="layui-input-inline">
+                                            <select name="subjectTypeCode">
+                                                <option value=""></option>
+                                                <option value="1">数学</option>
+                                                <option value="2">语文</option>
+                                                <option value="3">英语</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-md4 layui-col-sm12 layui-col-xs12 table-action-area">
+                                <div class="layui-btn layui-btn-sm layui-btn-primary website-button-blue-plain table-action" id="query">
+                                    <i class="layui-icon">&#xe848;</i>
+                                </div>
+                                <div class="layui-btn layui-btn-sm layui-btn-primary website-button-green-plain table-action" id="reset">
+                                    <i class="layui-icon">&#xe79b;</i>
+                                </div>
+                                <div class="layui-btn layui-btn-sm layui-btn-primary layui-bg-green table-action" shiro:hasAnyPermissions="expert:import,expert:view" id="importExcel">
+                                    <span>导入</span>
+                                </div>
+                                <div class="layui-btn layui-btn-sm layui-btn-primary layui-bg-orange table-action" id="downloadTemplate">
+                                    <span>模板</span>
+                                </div>
+                                <div class="layui-btn layui-btn-sm layui-btn-primary table-action action-more"
+                                     shiro:hasAnyPermissions="expert:add,expert:update,expert:export">
+                                    <i class="layui-icon">&#xe875;</i>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <table lay-filter="expertTable" lay-data="{id: 'expertTable'}"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/html" id="expert-class">
+    {{#
+    var subjectTypeCode = {
+    1: {title: '数学'},
+    2: {title: '语文'},
+    3: {title: '英语'}
+    }[d.subjectTypeCode];
+    }}
+    <span>{{ subjectTypeCode.title }}</span>
+</script>
+<script type="text/html" id="expert-position">
+    {{#
+    var positionType = {
+    1: {title: '职位1'},
+    2: {title: '职位2'},
+    3: {title: '职位3'}
+    }[d.positionTypeCode];
+    }}
+    <span>{{ positionType.title }}</span>
+</script>
+<script type="text/html" id="expert-title">
+    {{#
+    var positionType = {
+    1: {title: '职称1'},
+    2: {title: '职称2'},
+    3: {title: '职称3'}
+    }[d.positionTypeCode];
+    }}
+    <span>{{ positionType.title }}</span>
+</script>
+
+<script type="text/html" id="expert-option">
+    <span shiro:lacksPermission="expert:view,expert:update,expert:delete">
+        <span class="layui-badge-dot website-bg-orange"></span> 无权限
+    </span>
+    {{# if(d.isPublish){}}
+    <a lay-event="nopub" shiro:hasPermission="expert:update"><i
+            class="layui-icon website-edit-area website-red">&#xe781;</i></a>
+    <a lay-event="detail" shiro:hasPermission="expert:view"><i
+            class="layui-icon website-edit-area website-green">&#xe7a5;</i></a>
+    {{# } else { }}
+    <a lay-event="pub" shiro:hasPermission="expert:update"><i
+            class="layui-icon website-edit-area">&#xe77d;</i></a>
+    <a lay-event="detail" shiro:hasPermission="expert:view"><i
+            class="layui-icon website-edit-area website-green">&#xe7a5;</i></a>
+    <a lay-event="edit" shiro:hasPermission="expert:update"><i
+            class="layui-icon website-edit-area website-blue">&#xe7a4;</i></a>
+    <a lay-event="del" shiro:hasPermission="expert:delete"><i
+            class="layui-icon website-edit-area website-red">&#xe7f9;</i></a>
+    {{# } }}
+</script>
+<script data-th-inline="none" type="text/javascript">
+    layui.use(['dropdown', 'jquery', 'form', 'table', 'website','upload'], function () {
+        var $ = layui.jquery,
+            website = layui.website,
+            form = layui.form,
+            table = layui.table,
+            dropdown = layui.dropdown,
+            $view = $('#website-expert'),
+            $query = $view.find('#query'),
+            $reset = $view.find('#reset'),
+            $downloadTemplate = $view.find('#downloadTemplate'),
+            $searchForm = $view.find('form'),
+            sortObject = {field: 'createTime', type: null},
+            upload = layui.upload,
+            tableIns,
+            createTimeFrom,
+            createTimeTo;
+
+           upload.render({
+            elem: "#importExcel",//导入id
+            url: "expert/import",
+            size: '3072',
+            accept: "file",
+            exts: 'xls|xlsx|xlsm|xlt|xltx|xltm',
+            done: function (result) {
+                debugger;
+                if (result.code == 200) {
+                    var params = $.extend(getQueryParams(), {field: sortObject.field, order: sortObject.type});
+                    tableIns.reload({where: params, page: {curr: 1}});
+                    layer.msg("上传成功")
+                }else {
+                    var params = $.extend(getQueryParams(), {field: sortObject.field, order: sortObject.type});
+                    tableIns.reload({where: params, page: {curr: 1}});
+                    layer.msg(result.message)
+                }
+            }
+        });
+        form.render();
+        initTable();
+        dropdown.render({
+            elem: $view.find('.action-more'),
+            click: function (name, elem, event) {
+                var checkStatus = table.checkStatus('expertTable');
+                if (name === 'add') {
+                    website.modal.open('新增专家', 'system/expert/add', {
+                        btn: ['提交', '重置'],
+                        area: $(window).width() <= 750 ? '95%' : '50%',
+                        offset: '30px',
+                        yes: function (index, layero) {
+                            $('#expert-add').find('#submit').trigger('click');
+                        },
+                        btn2: function () {
+                            $('#expert-add').find('#reset').trigger('click');
+                            return false;
+                        }
+                    });
+                }
+                if (name === 'delete') {
+                    if (!checkStatus.data.length) {
+                        website.alert.warn('请选择需要删除的用户');
+                    } else {
+                        website.modal.confirm('删除用户', '确定删除该用户？', function () {
+                            var userIds = [];
+                            layui.each(checkStatus.data, function (key, item) {
+                                userIds.push(item.expertId)
+                            });
+                            deleteExperts(userIds.join(','));
+                        });
+                    }
+                }
+                if (name === 'export') {
+                    var params = $.extend(getQueryParams(), {field: sortObject.field, order: sortObject.type});
+                    params.pageSize = $view.find(".layui-laypage-limits option:selected").val();
+                    params.pageNum = $view.find(".layui-laypage-em").next().html();
+                    website.download(ctx + 'expert/excel', params, '专家信息表.xlsx');
+                }
+                if (name === 'import') {
+                    website.upload.render({
+                        elem: "#mportExcel",//导入id
+                        url: "expert/import",
+                        size: '3072',
+                        accept: "file",
+                        exts: 'xls|xlsx|xlsm|xlt|xltx|xltm',
+                        done: function (result) {
+                            if (result.status == 200) {
+                                var params = $.extend(getQueryParams(), {field: sortObject.field, order: sortObject.type});
+                                tableIns.reload({where: params, page: {curr: 1}});
+                                layer.msg("上传成功")
+                            }else {
+                                var params = $.extend(getQueryParams(), {field: sortObject.field, order: sortObject.type});
+                                tableIns.reload({where: params, page: {curr: 1}});
+                                layer.msg(result.message)
+                            }
+                        }
+                    })
+                }
+            },
+            options: [{
+                name: 'add',
+                title: '新增专家',
+                perms: 'expert:add'
+            }, {
+                name: 'delete',
+                title: '删除专家',
+                perms: 'expert:delete'
+            }]
+        });
+        table.on('tool(expertTable)', function (obj) {
+            var data = obj.data,
+                layEvent = obj.event;
+            if (layEvent === 'detail') {
+                website.modal.view('专家信息', 'system/expert/detail/' + data.expertId, {
+                    area: $(window).width() <= 750 ? '95%' : '660px'
+                });
+            }
+            if (layEvent === 'del') {
+                website.modal.confirm('删除专家', '确定删除该专家？', function () {
+                    deleteExperts(data.expertId);
+                });
+            }
+            if (layEvent === 'edit') {
+                website.modal.open('修改专家', 'system/expert/update/' + data.expertId, {
+                    area: $(window).width() <= 750 ? '90%' : '50%',
+                    offset: '30px',
+                    btn: ['提交', '取消'],
+                    yes: function (index, layero) {
+                        $('#expert-update').find('#submit').trigger('click');
+                    },
+                    btn2: function () {
+                        layer.closeAll();
+                    }
+                });
+            }
+            if (layEvent === 'pub') {
+                website.modal.confirm('发布专家', '确定发布该专家？', function () {
+                    pubishExpert(data.expertId);
+                });
+            }
+            if (layEvent === 'nopub') {
+                website.modal.confirm('取消发布专家', '确定取消发布该专家？', function () {
+                    cancelExpert(data.expertId);
+                });
+            }
+        });
+        table.on('sort(expertTable)', function (obj) {
+            sortObject = obj;
+            tableIns.reload({
+                initSort: obj,
+                where: $.extend(getQueryParams(), {
+                    field: obj.field,
+                    order: obj.type
+                })
+            });
+        });
+        $query.on('click', function () {
+            var params = $.extend(getQueryParams(), {field: sortObject.field, order: sortObject.type});
+            tableIns.reload({where: params, page: {curr: 1}});
+        });
+
+        $reset.on('click', function () {
+            $searchForm[0].reset();
+            sortObject.type = 'null';
+            createTimeTo = null;
+            createTimeFrom = null;
+            tableIns.reload({where: getQueryParams(), page: {curr: 1}, initSort: sortObject});
+        });
+        $downloadTemplate.on('click', function () {
+            var params = null;
+            website.download(ctx + 'expert/downloadT', params, '专家模板.xlsx');
+        });
+        function initTable() {
+            tableIns = website.table.init({
+                elem: $view.find('table'),
+                id: 'expertTable',
+                url: ctx + 'expert/list',
+                cols: [[
+                    {type: 'checkbox'},
+                   /* { type: 'numbers', title: '序号', },*/
+                    {field: 'name', title: '专家姓名', minWidth: 100},
+                    {title: '学科分类', templet: '#expert-class'},
+                    {field: 'company', title: '所在单位'},
+                    {title: '行政职位', templet: '#expert-position'},
+                    {title: '职称', templet: '#expert-title'},
+                    {field: 'phone', title: '联系电话', minWidth: 100},
+                    {field: 'address', title: '通讯地址', minWidth: 150},
+                    {title: '操作', toolbar: '#expert-option', minWidth: 200}
+                ]]
+            });
+        }
+        function getQueryParams() {
+            var params = $searchForm.serializeJson();
+            var createTime = params.time;
+            if (createTime) {
+                createTimeFrom = createTime.split(' - ')[0];
+                createTimeTo = createTime.split(' - ')[1];
+            }
+            params.invalidate_ie_cache = new Date();
+            params.createTimeFrom = createTimeFrom;
+            params.createTimeTo = createTimeTo;
+            return params;
+        }
+        function deleteExperts(expertIds) {
+            website.get(ctx + 'expert/delete/' + expertIds, null, function () {
+                website.alert.success('删除专家成功');
+                $query.click();
+            });
+        }
+        function pubishExpert(expertIds) {
+            website.get(ctx + 'expert/pubish/' + expertIds, null, function () {
+                website.alert.success('发布专家成功');
+                $query.click();
+            });
+        }
+        function cancelExpert(expertIds) {
+            website.get(ctx + 'expert/cancel/' + expertIds, null, function () {
+                website.alert.success('取消发布专家成功');
+                $query.click();
+            });
+        }
+
+    })
+</script>

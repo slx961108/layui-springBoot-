@@ -2,6 +2,7 @@ package com.cls.common.utils;
 
 
 import com.cls.common.entity.DeptTree;
+import com.cls.common.entity.DictTree;
 import com.cls.common.entity.MenuTree;
 import org.apache.commons.lang3.StringUtils;
 
@@ -50,6 +51,40 @@ public class TreeUtil {
         root.setState(state);
         return root;
     }
+    public static <T> DictTree<T> buildDictTree(List<DictTree<T>> nodes) {
+        if (nodes == null) {
+            return null;
+        }
+        List<DictTree<T>> topNodes = new ArrayList<>();
+        nodes.forEach(children -> {
+            String pid = children.getParentId();
+            if (pid == null || TOP_NODE_ID.equals(pid)) {
+                topNodes.add(children);
+                return;
+            }
+            for (DictTree<T> parent : nodes) {
+                String id = parent.getId();
+                if (id != null && id.equals(pid)) {
+                    parent.getChilds().add(children);
+                    children.setHasParent(true);
+                    parent.setHasChild(true);
+                    return;
+                }
+            }
+        });
+
+        DictTree<T> root = new DictTree<>();
+        root.setId(TOP_NODE_ID);
+        root.setParentId(StringUtils.EMPTY);
+        root.setHasParent(false);
+        root.setHasChild(true);
+        root.setChecked(true);
+        root.setChilds(topNodes);
+        Map<String, Object> state = new HashMap<>(16);
+        root.setState(state);
+        return root;
+    }
+
 
     public static <T> List<DeptTree<T>> buildDeptTree(List<DeptTree<T>> nodes) {
         if (nodes == null) {

@@ -5,7 +5,9 @@ import com.cls.common.controller.BaseController;
 import com.cls.common.entity.MyConstant;
 import com.cls.common.utils.DateUtil;
 import com.cls.common.utils.MyUtil;
+import com.cls.system.entity.Expert;
 import com.cls.system.entity.User;
+import com.cls.system.service.IExpertService;
 import com.cls.system.service.IUserDataPermissionService;
 import com.cls.system.service.IUserService;
 import lombok.RequiredArgsConstructor;
@@ -32,6 +34,7 @@ public class ViewController extends BaseController {
     private final IUserService userService;
     private final ShiroHelper shiroHelper;
     private final IUserDataPermissionService userDataPermissionService;
+    private final IExpertService expertService;
 
     @GetMapping("login")
     @ResponseBody
@@ -118,7 +121,6 @@ public class ViewController extends BaseController {
         resolveUserModel(username, model, false);
         return MyUtil.view("system/user/userUpdate");
     }
-
     @GetMapping(MyConstant.VIEW_PREFIX + "system/role")
     @RequiresPermissions("role:view")
     public String systemRole() {
@@ -176,4 +178,6 @@ public class ViewController extends BaseController {
             model.addAttribute("lastLoginTime", DateUtil.getDateFormat(user.getLastLoginTime(), DateUtil.FULL_TIME_SPLIT_PATTERN));
         }
     }
+
+
 }

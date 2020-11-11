@@ -1,0 +1,137 @@
+<style>
+    #expert-add {
+        padding: 20px 25px 25px 0;
+    }
+    .layui-layer-page .layui-layer-content {
+        overflow: visible !important;
+    }
+</style>
+<div class="layui-fluid" id="expert-add">
+    <form class="layui-form" action="" lay-filter="expert-add-form">
+        <div class="layui-form-item ">
+            <div class="layui-row">
+                <div class="layui-col-md6">
+                    <label class="layui-form-label website-form-item-require">专家姓名：</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="name" minlength="2" maxlength="10" lay-verify="required" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label website-form-item-require">学科分类：</label>
+                    <div class="layui-input-block">
+                        <select name="subjectTypeId" lay-filter="aihao" lay-verify="required">
+                            <option value="1">数学</option>
+                            <option value="2">语文</option>
+                            <option value="3">英语</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-row">
+                <div class="layui-col-md6">
+                   <label class="layui-form-label website-form-item-require">所属单位：</label>
+                   <div class="layui-input-block">
+                      <input type="text" name="company" lay-verify="required" autocomplete="off" class="layui-input">
+                   </div>
+               </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label website-form-item-require">行政职位：</label>
+                    <div class="layui-input-block">
+                        <select name="positionTypeId" lay-filter="aihao" lay-verify="required">
+                            <option value="1">职位1</option>
+                            <option value="2">职位2</option>
+                            <option value="3">职位3</option>
+                        </select>
+                    </div>
+               </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-row">
+                <div class="layui-col-md6">
+                    <label class="layui-form-label website-form-item-require">身份证号：</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="identityId" lay-verify="required|identity" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">银行帐号：</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="accountId" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-row">
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">银行帐号开户行：</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="bankName" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label website-form-item-require">职称：</label>
+                    <div class="layui-input-block">
+                        <select name="titleTypeId" lay-filter="aihao" lay-verify="required">
+                            <option value="1">职称1</option>
+                            <option value="2">职称2</option>
+                            <option value="3">职称3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-row">
+                <div class="layui-col-md6">
+                    <label class="layui-form-label website-form-item-require">联系电话：</label>
+                    <div class="layui-input-block">
+                        <input type="tel" name="phone" lay-verify="phone|required" maxlength="50" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                   <label class="layui-form-label website-form-item-require">电子邮件：</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="email" lay-verify="email|required" maxlength="50" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label website-form-item-require">通讯地址：</label>
+            <div class="layui-input-block">
+                <input type="text" name="address" lay-verify="required|required" maxlength="50" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item website-hide">
+            <button class="layui-btn" lay-submit="" lay-filter="expert-add-form-submit" id="submit"></button>
+            <button type="reset" class="layui-btn" id="reset"></button>
+        </div>
+    </form>
+</div>
+
+<script>
+    layui.use(['website', 'form', 'validate', 'eleTree'], function () {
+        var $ = layui.$,
+            website = layui.website,
+            layer = layui.layer,
+            form = layui.form,
+            $view = $('#expert-add'),
+            validate = layui.validate;
+
+        form.verify(validate);
+        form.render();
+        form.on('submit(expert-add-form-submit)', function (data) {
+            website.post(ctx + 'expert', data.field, function () {
+                layer.closeAll();
+                website.alert.success('新增专家成功');
+                $('#website-user').find('#query').click();
+            });
+            return false;
+        });
+    });
+</script>

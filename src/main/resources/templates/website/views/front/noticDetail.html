@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>中国法学会课题管理系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" th:href="@{../layui/css/layui.css(t=2)}" media="all">
+    <link rel="stylesheet" th:href="@{../website/css/website.css(t=2)}" media="all">
+    <link rel="stylesheet" th:href="@{../website/css/noticDetail.css(t=1)}" media="all">
+    <link rel="stylesheet" th:href="@{../website/css/frontHead.css(t=2)}" media="all">
+    <link rel="icon" th:href="@{../website/images/favicon.ico}" type="image/x-icon"/>
+</head>
+<body>
+<div id="font-index" lay-title="通知详情">
+    <div class="layui-header">
+        <div class="layui-logo" style="cursor: pointer">
+            <img data-th-src="@{../website/images/logo.png}">
+            <span>中国法学会课题管理系统</span>
+        </div>
+        <ul class="layui-layout-right login-ul">
+            <li class="layui-nav-item layui-hide-xs">
+                <button class="layui-btn layui-btn-radius layui-btn-sm" id="loginBtn">
+                    <i class="layui-icon">&#xe66f;</i>登录
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div id="contentView" class="content">
+
+    </div>
+</div>
+<script th:src="@{../layui/layui.js}"></script>
+<script id="contentTpl" type="text/html">
+{{d}}
+</script>
+<script th:inline="javascript">
+    var ctx = [[@{/}]];
+        layui.use(['form','laytpl', 'layer'], function (form, layer) {
+            var $ = layui.jquery,
+            laytpl = layui.laytpl;
+            var contentTpl = $("#contentTpl").html()
+                ,contentView = document.getElementById('contentView');
+
+            laytpl(contentTpl).render("", function(html){
+                contentView.innerHTML = html;
+            });
+        });
+</script>
+</body>
+</html>

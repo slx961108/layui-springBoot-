@@ -2,7 +2,7 @@ package ${basePackage}.${servicePackage};
 
 import ${basePackage}.${entityPackage}.${className};
 
-import QueryRequest;
+import com.cls.common.entity.QueryRequest;
 import com.github.pagehelper.PageInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -51,5 +51,5 @@ public interface I${className}Service extends IService<${className}> {
      *
      * @param ${className?uncap_first} ${className?uncap_first}
      */
-    void delete${className}(${className} ${className?uncap_first});
+    void delete${className}s(String[] ids);
 }

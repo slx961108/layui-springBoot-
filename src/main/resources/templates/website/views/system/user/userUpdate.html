@@ -118,12 +118,9 @@
 
         form.verify(validate);
         form.render();
-
         initUserValue();
         renderDeptTree();
-
         formSelects.render();
-
         function renderDeptTree() {
             _deptTree = eleTree.render({
                 elem: $view.find('.data-permission-tree'),

@@ -1,6 +1,6 @@
 package ${basePackage}.${serviceImplPackage};
 
-import QueryRequest;
+import com.cls.common.entity.QueryRequest;
 import ${basePackage}.${entityPackage}.${className};
 import ${basePackage}.${mapperPackage}.${className}Mapper;
 import ${basePackage}.${servicePackage}.I${className}Service;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.annotation.Propagation;
 import lombok.RequiredArgsConstructor;
-
+import com.github.pagehelper.PageHelper;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.github.pagehelper.PageInfo;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -27,14 +27,13 @@ import java.util.List;
 @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 public class ${className}ServiceImpl extends ServiceImpl<${className}Mapper, ${className}> implements I${className}Service {
 
-    private final ${className}Mapper ${className?uncap_first}Mapper;
-
+<#--    private final ${className}Mapper ${className?uncap_first}Mapper;-->
     @Override
     public PageInfo<${className}> find${className}s(QueryRequest request, ${className} ${className?uncap_first}) {
         LambdaQueryWrapper<${className}> queryWrapper = new LambdaQueryWrapper<>();
         // TODO 设置查询条件
         PageHelper.startPage(request.getPageNum(), request.getPageSize());
-        List<${className}> list= this.list(queryWrapper)
+        List<${className}> list= this.list(queryWrapper);
         PageInfo pageInfo = new PageInfo(list);
         return pageInfo;
     }
@@ -58,11 +57,16 @@ public class ${className}ServiceImpl extends ServiceImpl<${className}Mapper, ${c
         this.saveOrUpdate(${className?uncap_first});
     }
 
+
+    /**
+    * 删除
+    * @param ids
+    */
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public void delete${className}(${className} ${className?uncap_first}) {
-        LambdaQueryWrapper<${className}> wrapper = new LambdaQueryWrapper<>();
-	    // TODO 设置删除条件
-	    this.remove(wrapper);
-	}
+    public void delete${className}s(String[] ids) {
+        List< String > list = Arrays.asList(ids);
+        this.removeByIds(list);
+     }
+
 }

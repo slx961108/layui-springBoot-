@@ -1,13 +1,15 @@
 package com.cls.common.service;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.redis.connection.RedisConnection;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.core.Cursor;
+import org.springframework.data.redis.core.RedisConnectionUtils;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ScanOptions;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -558,5 +560,39 @@ public class RedisService {
             e.printStackTrace();
             return 0L;
         }
+    }
+
+    /**
+     * 删除缓存
+     *
+     * @param keys 可以传一个值 或多个
+     */
+    public void delAll(List<String> keys) {
+        if (keys != null && keys.size() > 0) {
+            redisTemplate.delete(keys);
+        }
+    }
+
+    /**
+     * 查找匹配key
+     *
+     * @param pattern key
+     * @return /
+     */
+    public List<String> scan(String pattern) {
+        ScanOptions options = ScanOptions.scanOptions().match(pattern).build();
+        RedisConnectionFactory factory = redisTemplate.getConnectionFactory();
+        RedisConnection rc = Objects.requireNonNull(factory).getConnection();
+        Cursor<byte[]> cursor = rc.scan(options);
+        List<String> result = new ArrayList<>();
+        while (cursor.hasNext()) {
+            result.add(new String(cursor.next()));
+        }
+        try {
+            RedisConnectionUtils.releaseConnection(rc, factory);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 }

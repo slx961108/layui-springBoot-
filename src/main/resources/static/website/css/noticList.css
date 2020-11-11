@@ -1,0 +1,41 @@
+body{
+    background-color: #fff;
+}
+.content h1{
+    text-align: center;
+}
+.content a{
+    color: black;
+}
+
+.content{
+    margin: 0 auto;
+    padding-top: 30px;
+    width: 50%;
+}
+.content ul{
+    font-size: 16px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+}
+
+.content ul li {
+    margin-top: 8px;
+}
+
+.content ul li a:hover {
+    color: blue;
+}
+
+.title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.time {
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

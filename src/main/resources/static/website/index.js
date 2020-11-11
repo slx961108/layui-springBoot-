@@ -1,6 +1,7 @@
 layui.extend({
     website: 'lay/modules/website',
-    validate: 'lay/modules/validate'
+    validate: 'lay/modules/validate',
+    dict: 'lay/modules/dict'
 }).define(['website', 'conf', 'jquery'], function (exports) {
     layui.website.initPage();
     // 拓展jq函数

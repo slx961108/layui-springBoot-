@@ -1,0 +1,30 @@
+.layui-header {
+    background-color: blue;
+}
+
+.layui-logo {
+    margin-left: 50px;
+}
+
+.layui-logo img, .layui-logo span {
+    line-height: 60px;
+}
+
+.layui-logo span {
+    margin-left: 6px;
+    font-size: 22px;
+    font-weight: normal;
+    color: white;
+}
+
+.login-ul {
+    line-height: 60px;
+    margin-right: 28px;
+}
+
+#loginBtn {
+    border-radius: 100px;
+    border: 1px solid white;
+    background-color: blue;
+}
+
